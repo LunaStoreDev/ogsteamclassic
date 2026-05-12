@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Welcome to Steam</title>
+    
+    <!-- Подключаем локальные CSS -->
+    <link href="css/steampowered03.css" rel="stylesheet" type="text/css">
+    
+    <style type="text/css">
+        body, html, div, span, p, a, li, td, th {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        a {
+            cursor: pointer;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer {
+            font-size: 10px;
+            color: #666;
+            padding: 10px;
+        }
+        
+        .statusContent {
+            font-size: 11px;
+        }
+        
+        .BODYGreen {
+            font-size: 11px;
+        }
+    </style>
+    
+    <script type="text/javascript">
+        function newImage(arg) {
+            if (document.images) {
+                rslt = new Image();
+                rslt.src = arg;
+                return rslt;
+            }
+        }
+        
+        function changeImagesArray(array) {
+            if (preloadFlag == true) {
+                var d = document; var img;
+                for (var i=0; i<array.length; i+=2) {
+                    img = null; var n = array[i];
+                    if (d.images) {img = d.images[n];}
+                    if (!img && d.getElementById) {img = d.getElementById(n);}
+                    if (img) {img.src = array[i+1];}
+                }
+            }
+        }
+        
+        function changeImages() {
+            changeImagesArray(changeImages.arguments);
+        }
+        
+        var preloadFlag = false;
+        function preloadImages() {
+            if (document.images) {
+                preloadFlag = true;
+            }
+        }
+        
+        // Ссылки больше НЕ блокируются — весь функционал восстановлен
+        // Удалён блокирующий обработчик событий
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            preloadImages();
+        });
+    </script>
+</head>
+
+<body onload="preloadImages();" bgcolor="#4c5844" leftmargin="0" topmargin="0">
+
+    <!-- Шапка с логотипом Valve -->
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" height="98%">
+        <tbody><tr height="55">
+            <td bgcolor="black" height="55">
+                <table width="383" border="0" cellspacing="0" cellpadding="0" height="55">
+                    <tbody><tr height="18">
+                        <td width="47" height="54" rowspan="2"></td>
+                        <td width="335" height="18"></td>
+                        <td width="1" height="18"><spacer type="block" width="1" height="18"></spacer></td>
+                    </tr>
+                    <tr height="36">
+                        <td width="335" height="36" valign="top" align="left">
+                            <a href="steampowered.html"><img src="images/Logo_VALVE.gif" alt="" width="65" height="18" border="0"></a>
+                        </td>
+                        <td width="1" height="36"><spacer type="block" width="1" height="36"></spacer></td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" valign="top"><br>
+                <!-- Верхний баннер -->
+                <table width="800" border="0" cellspacing="0" cellpadding="0" background="images/TopBanner.gif" height="75">
+                    <tbody><tr height="22">
+                        <td width="799" height="22" colspan="4"></td>
+                        <td width="1" height="22"><spacer type="block" width="1" height="22"></spacer></td>
+                    </tr>
+                    <tr height="3">
+                        <td width="251" height="52" rowspan="2"></td>
+                        <td content="" csheight="29" width="405" height="52" rowspan="2" valign="top">
+                            <div align="left">
+                                <font size="2"><span class="statusContent">Steam delivers Valve's games to your desktop and connects you to a massive gaming community. Check out the full <a href="steampowered.html"><b>FEATURE LIST</b></a> now.</span></font>
+                            </div>
+                        </td>
+                        <td width="143" height="3" colspan="2"></td>
+                        <td width="1" height="3"><spacer type="block" width="1" height="3"></spacer></td>
+                    </tr>
+                    <tr height="49">
+                        <td width="6" height="49"></td>
+                        <td width="137" height="49" valign="top" align="left">
+                            <!-- ЗДЕСЬ РАЗБЛОКИРОВАНА И ИЗМЕНЕНА ССЫЛКА Get Steam Now -->
+                            <a href="https://disk.yandex.ru/d/xtTZaQW2n9srIQ" target="_blank"><img src="images/but_getsteamnow02.gif" alt="Get Steam Now" width="124" height="24" border="0"></a>
+                        </td>
+                        <td width="1" height="49"><spacer type="block" width="1" height="49"></spacer></td>
+                    </tr>
+                </tbody></table>
+                
+                <!-- Основная навигация -->
+                <table width="803" border="0" cellspacing="0" cellpadding="0" height="921">
+                    <tbody><tr height="52">
+                        <td width="2" height="52" colspan="2"></td>
+                        <td width="173" height="52" valign="top" align="left"><img src="images/Banner_Nav_01.gif" alt="" width="173" height="41" border="0"></td>
+                        <td width="28" height="52" valign="top" align="left">
+                            <a href="steampowered.html"><img src="images/Banner_Nav_02.gif" alt="news" name="Banner_Nav_02" width="28" height="41" border="0"></a>
+                        </td>
+                        <td width="30" height="52" valign="top" align="left"><img src="images/Banner_Nav_03.gif" alt="" width="30" height="41" border="0"></td>
+                        <td width="81" height="52" valign="top" align="left">
+                            <!-- РАЗБЛОКИРОВАНА ССЫЛКА GetSteamNow (навигация) -->
+                            <a href="https://disk.yandex.ru/d/xtTZaQW2n9srIQ" target="_blank"><img src="images/Banner_Nav_04.gif" alt="getSteamNow" name="Banner_Nav_04" width="81" height="41" border="0"></a>
+                        </td>
+                        <td width="32" height="52" valign="top" align="left"><img src="images/Banner_Nav_05.gif" alt="" width="32" height="41" border="0"></td>
+                        <td width="66" height="52" valign="top" align="left">
+                            <a href="steampowered.html"><img src="images/Banner_Nav_06.gif" alt="Cyber Cafes" name="Banner_Nav_06" width="66" height="41" border="0"></a>
+                        </td>
+                        <td width="32" height="52" valign="top" align="left"><img src="images/Banner_Nav_07.gif" alt="" width="32" height="41" border="0"></td>
+                        <td width="45" height="52" valign="top" align="left">
+                            <a href="steampowered.html"><img src="images/Banner_Nav_08.gif" alt="Support" name="Banner_Nav_08" width="45" height="41" border="0"></a>
+                        </td>
+                        <td width="27" height="52" valign="top" align="left"><img src="images/Banner_Nav_09.gif" alt="" width="27" height="41" border="0"></td>
+                        <td width="40" height="52" valign="top" align="left">
+                            <a href="steampowered.html"><img src="images/Banner_Nav_10.gif" alt="Forums" name="Banner_Nav_10" width="40" height="41" border="0"></a>
+                        </td>
+                        <td width="30" height="52" valign="top" align="left"><img src="images/Banner_Nav_11.gif" alt="" width="30" height="41" border="0"></td>
+                        <td width="36" height="52" valign="top" align="left">
+                            <a href="steampowered.html"><img src="images/Banner_Nav_12.gif" alt="Status" name="Banner_Nav_12" width="36" height="41" border="0"></a>
+                        </td>
+                        <td width="180" height="52" valign="top" align="left"><img src="images/Banner_Nav_13.gif" alt="" width="180" height="41" border="0"></td>
+                        <td width="1" height="52"><spacer type="block" width="1" height="52"></spacer></td>
+                    </tr>
+                    
+                    <tr height="868">
+                        <td width="1" height="868"></td>
+                        <td width="801" height="868" colspan="14" valign="top" align="left">
+                            <table width="801" border="0" cellspacing="0" cellpadding="0" bgcolor="white" background="images/Call2ActionBkg02.jpg" height="613">
+                                <tbody><tr>
+                                    <td valign="top">
+                                        <table width="801" border="0" cellspacing="0" cellpadding="0" height="868">
+                                            <tbody>
+                                                <!-- Контент -->
+                                                <tr height="38">
+                                                    <td width="800" height="38" colspan="22"></td>
+                                                    <td width="1" height="38"><spacer type="block" width="1" height="38"></spacer></td>
+                                                </tr>
+                                                
+                                                <tr height="2">
+                                                    <td width="441" height="2" colspan="14"></td>
+                                                    <td width="354" height="120" colspan="7" rowspan="2" valign="top" align="left">
+                                                        <a href="steampowered.html"><img id="LINK_PlayHL2Now_01" src="images/LINK_PlayHL2Now_01.gif" alt="" name="LINK_PlayHL2Now_01" width="328" height="33" border="0"></a>
+                                                    </td>
+                                                    <td width="5" height="120" rowspan="2"></td>
+                                                    <td width="1" height="2"><spacer type="block" width="1" height="2"></spacer></td>
+                                                </tr>
+                                                
+                                                <tr height="118">
+                                                    <td width="18" height="211" rowspan="3"></td>
+                                                    <td class="BODYGreen" width="146" height="118" colspan="4" valign="top">
+                                                        <div class="BODYGreen">
+                                                            <p>
+                                                                <span>Visit the official sites:<br></span>
+                                                                <span>· <a href="steampowered.html"><font color="black"><b>Half-Life 2<br></b></font></a></span>
+                                                                <span>· <a href="steampowered.html"><font color="black"><b>Counter-Strike<br></b></font></a></span>
+                                                                <span>· <a href="steampowered.html"><font color="black"><b>Day of Defeat<br><br></b></font></a></span>
+                                                                <span>Buy the games <a href="steampowered.html"><font color="black"><b>HERE</b></font></a></span>
+                                                                <span class="BODYGreen"><span class="BODYGreen">!</span></span>
+                                                            </p>
+                                                        </div>
+                                                    </td>
+                                                    <td width="277" height="118" colspan="9"></td>
+                                                    <td width="1" height="118"><spacer type="block" width="1" height="118"></spacer></td>
+                                                </tr>
+                                                
+                                                <tr height="38">
+                                                    <td class="BODYGreen" width="150" height="93" colspan="6" rowspan="2" valign="top">
+                                                        <div class="BODYGreen">
+                                                            <p>
+                                                                <span>· <a href="steampowered.html"><font color="black"><b>Info+Licensing</b></font></a><font color="black"><b> </b>(PDF)</font></span>
+                                                                <span>· <a href="steampowered.html"><font color="black"><b>MOD Resources<br></b></font></a></span>
+                                                                <span>· <a href="steampowered.html"><font color="black"><b>SDK Documentation<br></b></font></a>· <a href="steampowered.html"><font color="black"><b>Tournaments</b></font></a></span>
+                                                            </p>
+                                                        </div>
+                                                    </td>
+                                                    <td width="632" height="38" colspan="15"></td>
+                                                    <td width="1" height="38"><spacer type="block" width="1" height="38"></spacer></td>
+                                                </tr>
+                                                
+                                                <tr height="55">
+                                                    <td width="372" height="55" colspan="10"></td>
+                                                    <td width="56" height="55" valign="top" align="left"><img src="images/LINK_ClickHere_01_01.gif" alt="" width="56" height="16" border="0"></td>
+                                                    <td width="50" height="55" valign="top" align="left">
+                                                        <a href="steampowered.html"><img id="LINK_ClickHere_01_02" src="images/LINK_ClickHere_01_02.gif" alt="" name="LINK_ClickHere_01_02" width="48" height="16" border="0"></a>
+                                                    </td>
+                                                    <td width="149" height="55" colspan="2" valign="top" align="left"><img src="images/LINK_ClickHere_01_03.gif" alt="" width="124" height="16" border="0"></td>
+                                                    <td width="5" height="55"></td>
+                                                    <td width="1" height="55"><spacer type="block" width="1" height="55"></spacer></td>
+                                                </tr>
+                                                
+                                                <tr height="39">
+                                                    <td width="20" height="225" colspan="3" rowspan="2"></td>
+                                                    <td width="146" height="39" colspan="3" valign="top">
+                                                        <p><font size="2" color="white"><span class="offerGOLD1"><span class="statusContent2"><b class="offerGOLD1">Now You Can Get the Official Gear!</b><br></span></span></font></p>
+                                                    </td>
+                                                    <td width="634" height="39" colspan="16"></td>
+                                                    <td width="1" height="39"><spacer type="block" width="1" height="39"></spacer></td>
+                                                </tr>
+                                                
+                                                <tr height="186">
+                                                    <td width="150" height="186" colspan="5" valign="top">
+                                                        <font size="2"><span class="statusContent">Visit the Valve Store and check out the offical shirts, posters, and more </span></font>
+                                                        <span class="statusContent"><a href="steampowered.html"><b><font color="white">Go there now!</font></b></a></span>
+                                                    </td>
+                                                    <td width="630" height="186" colspan="14"></td>
+                                                    <td width="1" height="186"><spacer type="block" width="1" height="186"></spacer></td>
+                                                </tr>
+                                                
+                                                <tr height="24">
+                                                    <td width="503" height="24" colspan="16"></td>
+                                                    <td class="BODYGreen" width="189" height="110" colspan="4" rowspan="3" valign="top">
+                                                        <div class="BODYGreen">
+                                                            <p><span>Featuring 6 incredible games from Valve. Click <a href="steampowered.html"><font color="black"><b>HERE</b></font></a></span><span class="BODYGreen"><span class="BODYGreen"> now!</span></span></p>
+                                                        </div>
+                                                    </td>
+                                                    <td width="108" height="110" colspan="2" rowspan="3"></td>
+                                                    <td width="1" height="24"><spacer type="block" width="1" height="24"></spacer></td>
+                                                </tr>
+                                                
+                                                <tr height="47">
+                                                    <td width="192" height="47" colspan="9"></td>
+                                                    <td class="BODYGreen" width="148" height="156" colspan="3" rowspan="3" valign="top">
+                                                        <div class="BODYGreen">
+                                                            <p><span>Includes Counter-Strike 1.6, the world's #1 online action game, plus single player games. Get your copy <a href="steampowered.html"><font color="black"><b>NOW</b></font></a>.</span></p>
+                                                        </div>
+                                                    </td>
+                                                    <td width="163" height="86" colspan="4" rowspan="2"></td>
+                                                    <td width="1" height="47"><spacer type="block" width="1" height="47"></spacer></td>
+                                                </tr>
+                                                
+                                                <tr height="39">
+                                                    <td width="18" height="109" rowspan="2"></td>
+                                                    <td class="BODYGreen" width="144" height="109" colspan="3" rowspan="2" valign="top">
+                                                        <div class="BODYGreen">
+                                                            <p>
+                                                                <span>· <a href="steampowered.html"><font color="black"><b>About Valve<br></b></font></a></span>
+                                                                <span>· <a href="steampowered.html"><font color="black"><b>Awards<br></b></font></a></span>
+                                                                <span>· <a href="steampowered.html"><font color="black"><b>Contact Us</b></font></a></span>
+                                                            </p>
+                                                        </div>
+                                                    </td>
+                                                    <td width="30" height="109" colspan="5" rowspan="2"></td>
+                                                    <td width="1" height="39"><spacer type="block" width="1" height="39"></spacer></td>
+                                                </tr>
+                                                
+                                                <tr height="70">
+                                                    <td width="153" height="70" colspan="3"></td>
+                                                    <td class="BODYGreen" width="302" height="70" colspan="6" valign="top">
+                                                        <div class="BODYGreen" align="center">
+                                                            <p><span>Includes Half-Life, Day of Defeat, and more!</span></p>
+                                                        </div>
+                                                    </td>
+                                                    <td width="5" height="281" rowspan="4"></td>
+                                                    <td width="1" height="70"><spacer type="block" width="1" height="70"></spacer></td>
+                                                </tr>
+                                                
+                                                <tr height="110">
+                                                    <td width="18" height="110"></td>
+                                                    <td class="BODYGreen" width="316" height="110" colspan="9" valign="top">
+                                                        <p>
+                                                            <span class="BODYGreen"><b>Questions, Answers, Etc.</b></span><br>
+                                                            <span class="BODYGreen">Steam's <a href="steampowered.html" title="Customer Service"><font color="black"><b>Support Pages</b></font></a> offer message boards, a list of frequently asked questions, and the Steam Troubleshooter to help identify and resolve any technical support issues you may be experiencing.</span>
+                                                        </p>
+                                                    </td>
+                                                    <td width="26" height="110" colspan="3"></td>
+                                                    <td width="1" height="110"><spacer type="block" width="1" height="110"></spacer></td>
+                                                </tr>
+                                                
+                                                <tr height="97">
+                                                    <td width="19" height="97" colspan="2"></td>
+                                                    <td class="BODYGreen" width="316" height="97" colspan="9" valign="top">
+                                                        <p>
+                                                            <b><span class="BODYGreen"><span class="BODYGreen">Games Your Customers Want</span></span><br></b>
+                                                            <span class="INDEX02Body2"><span class="BODYGreen">If you run a cyber café or gaming venue, Steam makes it easy for you to bring Valve's games to your customers. Over 1000 gaming venues have signed up for Valve's <a href="steampowered.html"><b><font color="black">Cyber Café Program</font></b></a></span></span>
+                                                        </p>
+                                                    </td>
+                                                    <td width="25" height="97" colspan="2"></td>
+                                                    <td width="1" height="97"><spacer type="block" width="1" height="97"></spacer></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                        <td width="1" height="868"><spacer type="block" width="1" height="868"></spacer></td>
+                    </tr>
+                </tbody></table>
+                
+                <!-- Футер -->
+                <table width="801" border="0" cellspacing="0" cellpadding="0" height="112">
+                    <tbody><tr height="11">
+                        <td width="800" height="11"></td>
+                        <td width="1" height="11"><spacer type="block" width="1" height="11"></spacer></td>
+                    </tr>
+                    <tr height="100">
+                        <td width="800" height="100" valign="top">
+                            <div class="footer">
+                                © 2005 Valve Corporation. All rights reserved. Valve, the Valve logo, Half-Life, the Half-Life logo, the Lambda logo, Steam, the Steam logo, Team Fortress, the Team Fortress logo, Opposing Force, Day of Defeat, the Day of Defeat logo, Counter-Strike, the Counter-Strike logo, Source, the Source logo, Valve Source and Counter-Strike: Condition Zero are trademarks and/or registered trademarks of Valve Corporation. 
+                                <a href="steampowered.html">Privacy Policy.</a> &nbsp;
+                                <a href="steampowered.html">Legal.</a> &nbsp;
+                                <a href="steampowered.html">Steam Subscriber Agreement.</a>
+                            </div>
+                            <p></p>
+                            <div align="right">
+                                <p><img src="images/creditcardonsteam.gif" alt="" width="279" height="20" border="0"></p>
+                            </div>
+                        </td>
+                        <td width="1" height="100"><spacer type="block" width="1" height="100"></spacer></td>
+                    </tr>
+                </tbody></table>
+                <p></p>
+            </td>
+        </tr>
+    </tbody></table>
+</body>
+</html>
